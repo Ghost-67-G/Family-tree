@@ -1,0 +1,281 @@
+/* Family Tree Styles */
+.family-tree-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.family-tree-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.family-tree-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tree-stats {
+  color: #718096;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Empty Tree State */
+.empty-tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.empty-tree-content {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.empty-tree-content h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.empty-tree-content p {
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+/* Tree Controls */
+.tree-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Add Root Forms */
+.add-root-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add-root-form.inline {
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.root-name-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  min-width: 200px;
+}
+
+.root-name-input.small {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.root-name-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-root-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-primary.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #cbd5e0;
+}
+
+.btn-secondary.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Tree Visualization */
+.tree-visualization {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #718096;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tree Legend */
+.tree-legend {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid #667eea;
+}
+
+.tree-legend h4 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.tree-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tree-legend li {
+  margin: 0.5rem 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .family-tree-container {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .family-tree-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .empty-tree-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .tree-visualization {
+    gap: 1rem;
+  }
+  
+  .root-name-input {
+    min-width: 150px;
+  }
+  
+  .add-root-form.inline {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .tree-legend {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .family-tree-container {
+    padding: 0.5rem;
+    margin: 0.25rem;
+  }
+  
+  .empty-tree-content {
+    padding: 1.5rem;
+  }
+  
+  .btn-primary.btn-large {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .tree-visualization {
+    flex-direction: column;
+    align-items: center;
+  }
+}

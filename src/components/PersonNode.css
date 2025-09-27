@@ -1,0 +1,263 @@
+/* Person Node Styles */
+.person-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  position: relative;
+}
+
+.person-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e2e8f0;
+  min-width: 200px;
+  max-width: 250px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.person-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.person-info {
+  margin-bottom: 0.5rem;
+}
+
+.person-display {
+  color: white;
+}
+
+.person-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.person-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.person-points {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.person-level {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+}
+
+.person-actions {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.person-actions button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.person-actions button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.btn-edit:hover {
+  background: #fbbf24;
+}
+
+.btn-add:hover {
+  background: #10b981;
+}
+
+.btn-remove:hover {
+  background: #ef4444;
+}
+
+.btn-details:hover {
+  background: #3b82f6;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+.btn-save {
+  background: #10b981 !important;
+  color: white;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 4px;
+}
+
+.btn-cancel {
+  background: #ef4444 !important;
+  color: white;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 4px;
+}
+
+/* Add Child Form */
+.add-child-form {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.child-name-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.add-child-actions {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+}
+
+/* Person Details */
+.person-details {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.person-details p {
+  margin: 0.2rem 0;
+}
+
+/* Children Container */
+.children-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.connection-line {
+  width: 2px;
+  height: 30px;
+  background: #cbd5e0;
+  margin-bottom: 1rem;
+}
+
+.children-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Level-based styling */
+.level-0 .person-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+}
+
+.level-1 .person-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-color: #f093fb;
+}
+
+.level-2 .person-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-color: #4facfe;
+}
+
+.level-3 .person-card {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  border-color: #43e97b;
+}
+
+.level-4 .person-card {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  border-color: #fa709a;
+}
+
+/* Default for deeper levels */
+.person-node[class*="level-"]:nth-child(n+6) .person-card {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-color: #a8edea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .person-card {
+    min-width: 180px;
+    max-width: 200px;
+    padding: 0.8rem;
+  }
+  
+  .person-name {
+    font-size: 1rem;
+  }
+  
+  .person-actions {
+    gap: 0.2rem;
+  }
+  
+  .person-actions button {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .children-grid {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .person-card {
+    min-width: 160px;
+    max-width: 180px;
+  }
+  
+  .children-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
